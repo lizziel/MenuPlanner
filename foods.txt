@@ -1,0 +1,151 @@
+protein
+steak,8;	
+pork,6;	
+chicken,4;	
+fish,7;	
+shrimp,6;	
+mussels,6;	
+tofu,2;	
+sausage,3;
+
+starch
+potatoes,1;	
+rice,0.75;	
+pasta,2;	
+millet,1.50;	
+quinoa,1.50;	
+farro,2.00;	
+sweet potatoes,2;	
+parsnips,2.50;	
+
+vegetable
+collards,2.50;	
+chard,2.50;	
+kale,2.50;	
+spinach,2.50;	
+broccoli,2.50;	
+green beans,2.50;	
+asparagus,2.50;	
+eggplant,2.50;	
+mushrooms,2.50;	
+
+savory
+yellow onions,0.50;	
+red onions,0.50;	
+scallions,1;	
+leeks,1.50;	
+garlic,0.25;	
+shallots,0.50;
+
+green
+green leaf lettuce,1.50;	
+red leaf lettuce,1.50;	
+romaine,2;		
+arugula,2;		
+spinach,2.00;		
+watercress,2.50;	
+boston lettuce,2.00;
+
+salad topping
+seaweed flakes,0.75;
+sunflower seeds,1.00;
+tomatoes,3.00;	
+cucumbers,1.50;	
+carrots,1.50;	
+red onions,0.50;	
+red peppers,2.50;	
+goat cheese,2.00;	
+avocado,2.50;
+shrimp,6;
+radishes,1.50;
+celery root,1.50;
+yellow peppers,2.50;
+egg,1;
+
+salad dressing
+balsamic vinaigrette,1;
+lemon-garlic vinaigrette,1;
+raspberry-poppy dressing,2;
+miso-ginger dressing,2;
+apple cider vinaigrette,1;
+
+bruschetta bread
+baguette,2;
+
+bruschetta topping
+kalamata olives,2;
+black olive,1;	
+basil pesto,2;
+duck pate,4;		
+cheese,2;
+garlic-herb butter,2;
+guacamole,2;
+smoked salmon,5;
+shrimp spread,4;
+marinated tomatoes,2;
+
+soup
+potato-leek soup,3;
+butternut squash soup,3;
+curried cauliflower soup,3;
+carrot soup,3;
+clam chowder,3;
+salmon chowder,3;
+miso soup,2;
+sweet potato and peanut soup,3;
+gazpacho,4;
+asparagus soup,3;
+
+sandwich main filling
+turkey,3.50;
+ham,3.50;
+roast beef,4;
+roasted vegetables,2;
+bacon,2.50;
+egg salad,1;
+tuna,2.50;
+mushrooms,2;
+salami,3;
+sausage,2.50;
+
+sandwich topping
+tomatoes,3;
+cheese,3;
+arugula,1.50;
+avocado,2;
+mesclun,1;
+red leaf lettuce,1;
+cucumbers,2;
+red onions,1;
+watercress,2;
+
+sandwich bread
+rye,2;
+baguette,2;
+whole wheat,2;
+foccacia,2;
+ciabatta,2;
+wrap,2;
+
+burger bread
+hamburger bun,1;
+
+burger filling
+salmon burger,3.50;
+hamburger,3.50;
+veggie burger,2;
+
+burger topping
+tomatoes,3;
+cheese,3;
+arugula,2;
+avocado,4;
+mushrooms,3;
+red peppers,3;
+basil,3;
+onions,1;
+
+
+
+	
+

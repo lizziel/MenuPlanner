@@ -1,0 +1,60 @@
+C++/Object-Oriented Programming Final Project
+Lizzie Lundgren
+May 12, 2011
+
+This directory contains all files needed for a menu planner program called MakeMenu.  
+
+Overview
+
+The program plans a menu of up to 7 dinners and 7 lunches while optimizing using foods that the user has indicated she already has in file have.txt.  All possible ingredients in the meals are stored in another text file: foods.txt.  
+
+The user is asked how many lunches and how many dinners she would like planned.  The algorithm is based on what I use to plan out the meals for my girlfriend and I at the start of the week.  To minimize cooking, the portion size of as many meals as needed are doubled to use leftovers.  A cooking session may result in a dinner and a lunch but not two dinners or two lunches (unless the user ultimately decides to spread them out this way).  A cooking session never results in more than 2 meals so maximum frequency per meal is 2.
+
+Each meal represents two portion sizes.  A meal with a frequency of 1 means it can be a lunch or dinner for two.  A meal with a frequency of 2 means it is meant to be used as both a dinner for two and a lunch for two.
+
+Internally the main is in MakeMenu.cpp and that is where the highest level of the program is executed.  
+
+The Food Database
+
+First, a Fooddatabase object is created from the foods.txt file.  As administrator of the program I have customized the food database to only foods that my girlfriend and I like to eat.  It also includes estimated price per ingredient per meal (2 servings).  
+
+The Fooddatabase object stores the different types of food in vectors of Foodgroup object pointers.  Foods are categorized by foodgroup type (e.g. vegetable) in the fooddatabase file.  Each foodgroup object contains a vector of Ingredient objects, each of which has the name and cost that is in the food database. Several of the foodgroups are customized for certain types of meals that we like to eat.  For example, "salad toppings" is a foodgroup. New foodgroups are easily added by simply following the format in the foodatabase.txt file.
+
+The Menu Planner
+
+Next, a MenuPlanner object is created.  The menuplanner is where the menu actually gets created. In its constructor it builds the have list that contains what foods the user has and in what quantities.  Quantities are the same as for meals:  1 indicates two servings, 2 indicates four servings, etc.  
+
+The menuplanner starts out with am empty used list which stores what foods are used in the menu and in what quantities.  It also starts out with a have left list equal to the have list and which stores what ingredients and in what quantities  have not been used yet.  These, along with the have list, are actually vectors of pairs where the first in the pair is ingredient name and the second is amount. 
+
+When the MenuPlanner object is constructed it creates a Menu object.  The Menu object contains a vector of Meal pointers and the vector is initialized as empty.  It also contains the number of lunches and dinners that need to be created, accepting the user input when it is initialized.  It uses these numbers to calculate how many meals and with what frequency per meal will need to be created.  
+
+Making the Menu
+
+Once the Menuplanner object has been created and the Menu object has been constructed it is time to make the menu.  The Menuplanner object calls its makeMenu() method to do this. It builds all meals with frequency equal to 2 first, followed by all meals with frequency of 1.
+
+There are currently two types of meals:  alacarte and pairmeal.  Each is a class that inherits from the Meal abstract base class.  Alacarte consists of four ingredients, each of a different Foodgroup, and basically is four items separately cooked and put on the same plate.  The user has the option to combine them in any way they please of course.  
+
+The other type of meal is Pairmeal which contains two halfmeals.  There are currently five types of halfmeals, each of which is a class that inherits from the Halfmeal abstract base class.  The five types are Salad, Soup, Bruschetta, Sandwich, and Burger.  All of these are items we eat but always with something else.  For this program that something else is another halfmeal.  
+
+The meals for the menu are created in a loop.  The type of meal that is created is based on statistics.  A random number generator makes it such that on average 1 in 4 meals is a pairmeal, while the rest are alacarte.  
+
+Creating an alacarte meal is pretty simple.  Query the database for the four ingredients from the specific desired foodgroup.  The have left list, used list, and frequency of the meal are all used to optimize using ingredients that the user has left or not used.   
+
+Creating a pairmeal is more complicated.  Two halfmeals must be created.  Each of the halfmeals is similar to the alacarte meal:  they consist of one or more ingredients from very specific foodgroups.  When a pairmeal is created it uses some rules on what halfmeals are created.  The quick summary is if the user has "baguette" or "burger" either Bruschetta or Burger are created.  Else, a halfmeal type is randomly picked.  Once one halfmeal has been found, the other one chosen cannot be the same one.  In addition, if the first halfmeal is bread-based (burger, bruschetta, or sandwich), only a soup or salad can be chosen to accompany it.
+
+After one meal is created, the used and have left lists in the menuplanner are updated.  These are used during the making of the next meal to optimize using ingredients the user has and also not repeating ingredients used more than necessary.
+
+Then What?
+
+After the menu has been planned a number of things are displayed to the user.
+These include:
+      Each meal, with ID number, frequency, type of meal, and ingredients.
+      Whether any of the foods in the have.txt file were not contained in the fooddatabase.  
+      What foods and in what amounts are left over that the user has.
+      What foods and in what amounts are used in the menu.
+
+The user is asked if the menu is acceptable.  They can either say yes and quit, or say no and make a new menu.  This is done by making a new menuplanner.
+
+Whether any of the foods in the have.txt file were not contained in the food database is shown to the user to give them a chance to potentially update either the food database or the have list.  Having a food not in the database does not disrupt making a menu but it does get ignored with no chance of making its way into the menu.  The user can therefore see if this is happening and then quit and do something about it if it is.
+
+If the user accepts the meal, a shopping list is printed that contains the name of each ingredient that needs to be acquired along with the amount.  The estimated worth of the menu is also printed.
