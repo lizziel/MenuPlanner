@@ -22,6 +22,7 @@ Ingredient& Ingredient::operator=(const Ingredient& other)
     return *this;
   m_name = other.getName();
   m_cost = other.getCost();
+  return *this;
 }
 
 std::string Ingredient::getName() const
