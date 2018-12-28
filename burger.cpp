@@ -19,7 +19,7 @@ Burger::Burger( const FoodDatabase& fdb, const vector< pair< string, size_t > >&
   m_burger = getIngred( "burger filling", fdb, used, haveLeft );
   m_foodNames.push_back(m_burger.getName());
 
-  m_bun = fdb.getSpecificIngred("burger bread", "hamburger bun");
+  m_bun = fdb.getSpecificIngred("burger bread", "bun");
   m_foodNames.push_back(m_bun.getName());
 
   m_topping1 = getIngred("burger topping", fdb, used, haveLeft);
