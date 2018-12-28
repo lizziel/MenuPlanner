@@ -11,6 +11,7 @@
 #include "fooddatabase.h"
 #include "pairmeal.h"
 #include "alacarte.h"
+#include "onepot.h"
 
 using std::string;
 using std::vector;
@@ -75,24 +76,30 @@ void MenuPlanner::makeMenu()
 	  throw std::logic_error ("Meal ID exceeds number of meals planned.");
 	}
 
-      size_t randnum = std::rand() % 3;      
-      if (randnum >= 1 ) 
+      // set algorithm for choosing meal type
+      size_t randnum = std::rand() % 5;      
+      if ( randnum <= 1 ) 
 	{
 	  Alacarte* newAlaPtr = new Alacarte( m_fdb, m_used, m_haveLeft, ID, freq );
 	  m_menu.addMeal( newAlaPtr );
 	}
-      else
+      else if ( randnum <= 3 )
+	{    
+	  Onepot* newOnepotPtr = new Onepot( m_fdb, m_used, m_haveLeft, ID, freq );
+	  m_menu.addMeal( newOnepotPtr );
+	} 
+      else   
 	{    
 	  Pairmeal* newPairPtr = new Pairmeal( m_fdb, m_used, m_haveLeft, ID, freq );
 	  m_menu.addMeal( newPairPtr );
-	}    
+	} 
       updateFoodLists( m_menu.getMealIngreds(ID), freq );
 
     }
 
   m_menu.printMenu();
   printItemsNotInDatabase();
-  printListStatus();
+  //printListStatus();
 }
 
 void MenuPlanner::updateFoodLists(const vector<string>& mealIngreds, size_t freq)
@@ -156,11 +163,7 @@ void MenuPlanner::printItemsNotInDatabase() const
 	  missingIngred.push_back(it->first);
 	}
     }
-  if (missingIngred.empty())
-    {
-      cout << "All items that you have were found in the food database." << endl << endl;
-    } 
-  else
+  if (!missingIngred.empty())
     {
       cout << "The following were not found in the food database:" << endl;
       for ( siter it2 = missingIngred.begin(); it2 != missingIngred.end(); ++it2)

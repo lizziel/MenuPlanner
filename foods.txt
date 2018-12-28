@@ -1,39 +1,46 @@
 protein
-steak,8;	
-pork,6;	
-chicken,4;	
-fish,7;	
-shrimp,6;	
-mussels,6;	
-tofu,2;	
-sausage,3;
+steak,8;
+mini beef burgers,8;
+sweet pork sausage,5;
+hot pork sausage,5;
+pork chops,6;	
+leg of lamb,12;
+lamb chops,8;
+mini lamb burgers,8;
+roast chicken,4;
+chicken wings,8;
+salmon,18;
+swordfish,18;
+white fish,9;
+shrimp,6;
 
 starch
-potatoes,1;	
-rice,0.75;	
-pasta,2;	
-millet,1.50;	
-quinoa,1.50;	
-farro,2.00;	
-sweet potatoes,2;	
-parsnips,2.50;	
+baked potato,3;
+roasted potatoes,1;	
+mashed potatoes,1;	
+jasmine rice,0.75;	
+wild rice,0.75;	
+rice pasta,2;	
+sweet potato fries,2;	
+roasted roots,2.50;	
+fried plantains,2.50;	
+roasted squash,5;
+honey-cumin carrots,3;
 
 vegetable
-collards,2.50;	
-chard,2.50;	
-kale,2.50;	
-spinach,2.50;	
-broccoli,2.50;	
-green beans,2.50;	
-asparagus,2.50;	
-eggplant,2.50;	
-mushrooms,2.50;	
+sauteed kale with garlic,2.50;	
+roasted broccoli,2.50;	
+steamed broccoli with butter,2.50;
+roasted cauliflower,2.50;		
+sauteed green beans with mushrooms and shallows,2.50;	
+sauteed green beans with garlic,2.50;	
+roasted asparagus,2.50;	
+small salad,3;
 
 savory
 yellow onions,0.50;	
 red onions,0.50;	
-scallions,1;	
-leeks,1.50;	
+leeks,1;
 garlic,0.25;	
 shallots,0.50;
 
@@ -52,22 +59,21 @@ sunflower seeds,1.00;
 tomatoes,3.00;	
 cucumbers,1.50;	
 carrots,1.50;	
-red onions,0.50;	
-red peppers,2.50;	
-goat cheese,2.00;	
 avocado,2.50;
 shrimp,6;
 radishes,1.50;
 celery root,1.50;
-yellow peppers,2.50;
-egg,1;
+sweet peppers,2.50;
+boiled egg,1;
+beets,2;
+artichoke hearts,4;
+olives,4;
 
 salad dressing
 balsamic vinaigrette,1;
-lemon-garlic vinaigrette,1;
-raspberry-poppy dressing,2;
 miso-ginger dressing,2;
 apple cider vinaigrette,1;
+champagne-shallot vinaigrette;
 
 bruschetta bread
 baguette,2;
@@ -89,12 +95,7 @@ potato-leek soup,3;
 butternut squash soup,3;
 curried cauliflower soup,3;
 carrot soup,3;
-clam chowder,3;
-salmon chowder,3;
-miso soup,2;
-sweet potato and peanut soup,3;
-gazpacho,4;
-asparagus soup,3;
+mushroom and wild rice soup,4;
 
 sandwich main filling
 turkey,3.50;
@@ -128,12 +129,13 @@ ciabatta,2;
 wrap,2;
 
 burger bread
-hamburger bun,1;
+bun,1;
 
 burger filling
 salmon burger,3.50;
 hamburger,3.50;
 veggie burger,2;
+hot dog,2;
 
 burger topping
 tomatoes,3;
@@ -145,7 +147,13 @@ red peppers,3;
 basil,3;
 onions,1;
 
-
-
-	
-
+onepot
+beef stew,5;
+sweet potato and peanut soup,3;
+pork chop fried rice,4;
+mushroom risotto with kale and crackers,4;
+chicken-coconut thai stew with rice,5;
+coconut-curry lamb stew,7;;
+spinach stew with boiled plantains,5;
+bi bim bap,5;
+jollof with chicken,4;

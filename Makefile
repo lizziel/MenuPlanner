@@ -1,2 +1,2 @@
 add:
-	g++ MakeMenu.cpp fooddatabase.cpp foodgroup.cpp ingredient.cpp menuplanner.cpp menu.cpp meal.cpp alacarte.cpp pairmeal.cpp halfmeal.cpp salad.cpp bruschetta.cpp burger.cpp soup.cpp sandwich.cpp -o MakeMenu 
+	g++ MakeMenu.cpp fooddatabase.cpp foodgroup.cpp ingredient.cpp menuplanner.cpp menu.cpp meal.cpp alacarte.cpp onepot.cpp pairmeal.cpp halfmeal.cpp salad.cpp bruschetta.cpp burger.cpp soup.cpp sandwich.cpp -o MakeMenu 
