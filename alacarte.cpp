@@ -29,21 +29,26 @@ Alacarte::Alacarte( const FoodDatabase& fdb, const vector< pair< string, size_t 
   m_starch = getIngred("starch", fdb, used, haveLeft);
   m_foodInMeal.push_back(m_starch.getName());
 
-  m_savory = getIngred("savory", fdb, used, haveLeft);
-  m_foodInMeal.push_back(m_savory.getName());
+  //m_savory = getIngred("savory", fdb, used, haveLeft);
+  //m_foodInMeal.push_back(m_savory.getName());
 
 } 
 
 void Alacarte::printMeal() const
 {
   cout << "Meal " << m_ID << endl;
+  cout << "\tPlate: ";
+  cout << m_protein.getName();
+  cout << ", " << m_starch.getName();
+  cout << ", " << m_veg.getName();
+  cout << endl;
+  //cout << ", " << m_savory.getName();
   cout << "\tFrequency: " << m_freq << endl;
-  cout << "\tA La Carte: " << m_veg.getName() << ", " << m_starch.getName();
-  cout << ", " << m_protein.getName() << ", " << m_savory.getName() << endl << endl;
 }
 
 double Alacarte::getMealCost() const
 {
-  double cost = m_veg.getCost() + m_protein.getCost() + m_starch.getCost() + m_savory.getCost();
+  //double cost = m_veg.getCost() + m_protein.getCost() + m_starch.getCost() + m_savory.getCost();
+  double cost = m_veg.getCost() + m_protein.getCost() + m_starch.getCost();
   return cost;
 }

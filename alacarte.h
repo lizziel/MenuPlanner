@@ -22,7 +22,7 @@ class Alacarte : public Meal
   Ingredient m_veg;
   Ingredient m_protein;
   Ingredient m_starch;
-  Ingredient m_savory;
+  //Ingredient m_savory;
 
 };
 
