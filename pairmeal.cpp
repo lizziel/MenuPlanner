@@ -100,12 +100,11 @@ Pairmeal::~Pairmeal()
 void Pairmeal::printMeal() const
 {
   cout << "Meal " << m_ID << endl;
-  cout << "\tFrequency: " << m_freq << endl;
   cout << "\t";
   m_first->printHalfmeal();
   cout << "\t"; 
   m_second->printHalfmeal();
-  cout << endl;
+  cout << "\tFrequency: " << m_freq << endl;
 }
 
 Halfmeal* Pairmeal::getNewHalfmeal( size_t num, const FoodDatabase& fdb, const vector< pair<string,size_t> >& used, const vector< pair<string, size_t > >& haveleft, size_t freq ) const

@@ -70,10 +70,13 @@ void Menu::printMenu() const
 {
   std::cout << std::endl;
   std::cout << "**************************************************" << std::endl;
+  std::cout << "                      M E N U                     " << std::endl;
+  std::cout << "**************************************************" << std::endl << std::endl;;
   for (std::vector< Meal*>::const_iterator it = m_meals.begin(); it != m_meals.end(); ++it)
     {
       (*it)->printMeal();
     }
+  std::cout << std::endl << "**************************************************" << std::endl;
   std::cout << std::endl;
 }
 
