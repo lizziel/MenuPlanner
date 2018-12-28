@@ -53,14 +53,19 @@ int main()
 	  MenuPlanner mymenu(foodsWeLike, "have.txt", numLunches, numDinners);
 	  mymenu.makeMenu();
 
-	  cout << "Accept this menu? (y/n)" << endl;
+	  cout << "Accept this menu? (y/n/q)" << endl;
 	  std::string answer = "";
 	  bool quitPrompt = true;
 	  while (quitPrompt)
 	    {
 	      std::getline(cin, answer);
 	      // std::stringstream inputstream(answer);
-	      if (answer != "y" && answer != "n")
+              if (answer == "q" )
+		{
+                  keepPlanning = false;
+                  break;
+		}
+	      else if (answer != "y" && answer != "n")
 		cout << "That is not a valid input.  Try again." << endl; 
 	      else
 		break;
